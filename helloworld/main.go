@@ -3,6 +3,13 @@
 //Reusable : like code dependencies or library.(helper function or some code will used in future).
 package main
 
+import (
+	"fmt"
+)
+
 func main() {
-	printState()
+	cards := []string{"a", "b", "c"}
+	for index, card := range cards {
+		fmt.Println(card)
+	}
 }
