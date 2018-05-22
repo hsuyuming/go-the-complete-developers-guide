@@ -7,10 +7,11 @@ package main
 
 import "fmt"
 
-var deckSize int
-
 func main() {
-	//var deckSize int
-	deckSize = 50
-	fmt.Println(deckSize)
+	fmt.Println(getTitle())
+}
+
+//go don't need to define function first(from quit)
+func getTitle() string {
+	return "Harry Potter"
 }
