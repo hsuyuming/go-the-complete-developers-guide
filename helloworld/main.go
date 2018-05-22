@@ -7,6 +7,10 @@ package main
 
 import "fmt"
 
+var deckSize int
+
 func main() {
-	fmt.Println("Hi there")
+	//var deckSize int
+	deckSize = 50
+	fmt.Println(deckSize)
 }
