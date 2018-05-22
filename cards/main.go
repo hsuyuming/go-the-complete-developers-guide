@@ -7,11 +7,16 @@ import (
 //go type =>[bool,string,int,float64]
 
 func main() {
-	//var card string = "Ace of Spades"
-	//only use := when we are defined new variable.
-	card := "Ace of Spades"
-
-	card = "Five of Diamonds"
-
+	card := newCard()
 	fmt.Println(card)
 }
+
+func newCard() string {
+	return "Five of Diamonds"
+}
+
+/*
+func newCard() int {
+	return 12
+}
+*/
