@@ -12,14 +12,7 @@ Slice => like an array cna grow or shrink at will.
 package main
 
 func main() {
-	//slice of type string
-	cards := deck{"Ace og Diamonds", newCard()}
-	//append return the new slice not modify original one
-	cards = append(cards, "Six of Spades")
+	cards := newDeck()
 
 	cards.print()
-}
-
-func newCard() string {
-	return "Five of Diamonds"
 }
