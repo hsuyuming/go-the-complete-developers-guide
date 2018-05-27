@@ -12,6 +12,6 @@ Slice => like an array cna grow or shrink at will.
 package main
 
 func main() {
-	cards := newDeck()
-	cards.saveToFile("my_cards")
+	cards := newDeckFromFile("my_card")
+	cards.print()
 }
