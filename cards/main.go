@@ -12,6 +12,7 @@ Slice => like an array cna grow or shrink at will.
 package main
 
 func main() {
-	cards := newDeckFromFile("my_card")
+	cards := newDeck()
+	cards.shuffle()
 	cards.print()
 }
