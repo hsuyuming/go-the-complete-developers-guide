@@ -10,12 +10,10 @@ type person struct {
 }
 
 func main() {
-	//first way to create new person
-	alex := person{"Alex", "Anderson"}
+	//third way to define new struct
+	var alex person
+	alex.firstName = "Alex"
+	alex.lastName = "Anderson"
 	fmt.Println(alex)
-	//second way to define a new struct
-	alex = person{firstName: "Alex", lastName: "Anderson"}
-	fmt.Println(alex)
-	fmt.Println(alex.firstName)
-	fmt.Println(alex.lastName)
+	fmt.Printf("%+v", alex)
 }
