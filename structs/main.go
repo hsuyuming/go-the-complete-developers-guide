@@ -16,6 +16,14 @@ type person struct {
 	contactInfo
 }
 
+func (p person) print() {
+	fmt.Printf("%+v \n", p)
+}
+
+func (p person) updateName(newFirstName string) {
+	p.firstName = newFirstName
+}
+
 func main() {
 	//go => when ever we are declaring multi line structures
 	//every single line must have a comma,even if it is the last property declaration or the last
@@ -27,5 +35,6 @@ func main() {
 			zipCode: 9400,
 		},
 	}
-	fmt.Printf("%+v \n", jim)
+	jim.updateName("jimmy")
+	jim.print()
 }
