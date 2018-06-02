@@ -21,10 +21,19 @@ func (p person) print() {
 	fmt.Printf("%+v \n", p)
 }
 
+/*
 func (p person) updateName(newFirstName string) {
 	p.firstName = newFirstName
 	fmt.Printf("%p\n", &p) //result => 0xc42001e180
 	p.print()              //result=> {firstName:jimmy lastName:Party contactInfo:{email:jim@gmail.com zipCode:9400}}
+}
+*/
+
+//*person => This is a type description,it means we're working with a pointer to a person
+func (pointerToPerson *person) updateName(newFirstName string) {
+	fmt.Printf("%p\n", &*pointerToPerson) //result ->0xc42001e100
+	//star operator => give me the value this memory address is pointing at
+	(*pointerToPerson).firstName = newFirstName
 }
 
 /*
@@ -44,7 +53,9 @@ func main() {
 			zipCode: 9400,
 		},
 	}
+	//ambersand operator => give new the memory address of the value this variable is pointing at
 	fmt.Printf("%p\n", &jim) //result =>0xc42001e100
-	jim.updateName("jimmy")
-	//jim.print() //result=>{firstName:Jim lastName:Party contactInfo:{email:jim@gmail.com zipCode:9400}}
+	jimPointer := &jim
+	jimPointer.updateName("jimmy")
+	jim.print() //result=>{firstName:Jim lastName:Party contactInfo:{email:jim@gmail.com zipCode:9400}}
 }
