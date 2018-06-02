@@ -30,6 +30,7 @@ func (p person) updateName(newFirstName string) {
 */
 
 //*person => This is a type description,it means we're working with a pointer to a person
+//a type of pointer that pointer a person
 func (pointerToPerson *person) updateName(newFirstName string) {
 	fmt.Printf("%p\n", &*pointerToPerson) //result ->0xc42001e100
 	//star operator => give me the value this memory address is pointing at
