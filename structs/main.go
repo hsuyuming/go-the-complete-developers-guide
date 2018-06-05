@@ -56,7 +56,6 @@ func main() {
 	}
 	//ambersand operator => give new the memory address of the value this variable is pointing at
 	fmt.Printf("%p\n", &jim) //result =>0xc42001e100
-	jimPointer := &jim
-	jimPointer.updateName("jimmy")
+	jim.updateName("jimmy")
 	jim.print() //result=>{firstName:Jim lastName:Party contactInfo:{email:jim@gmail.com zipCode:9400}}
 }
